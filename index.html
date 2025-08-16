@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bean & Brew — Home</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">Bundles up to <strong>30% OFF</strong> • Use code <strong>BREW10</strong></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html">BEAN &amp; BREW</a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="actions">
+        <a class="icon" href="#">Login</a>
+        <a class="icon" href="#">Cart (0)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1 data-animate>Elevate your morning ritual</h1>
+        <p class="lead" data-animate>Handcrafted instant blends, nutty roasts and playful flavours — made in India.</p>
+        <div class="hero-ctas" data-animate>
+          <a href="products.html" class="btn primary">Shop Bundles</a>
+          <a href="products.html" class="btn outline">Shop Single Packs</a>
+        </div>
+      </div>
+      <div class="hero-media" data-animate>
+        <img src="images/homepage.jpg" alt="coffee hero">
+      </div>
+    </div>
+  </section>
+
+  <!-- Badges -->
+  <section class="badges container">
+    <div class="badge" data-animate>Made in India</div>
+    <div class="badge" data-animate>Ethically Sourced</div>
+    <div class="badge" data-animate>No Preservatives</div>
+  </section>
+
+  <!-- Featured products -->
+  <section class="products container">
+    <h2 class="section-title" data-animate>Featured</h2>
+    <div class="product-grid">
+      <article class="card" data-animate>
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=900&auto=format&fit=crop" alt="Mocha">
+        <div class="card-body">
+          <h3>Mocha pe Chauka — 100g</h3>
+          <p class="price">₹899 <span class="mrp">₹999</span></p>
+          <a class="btn small primary" href="products.html">Add</a>
+        </div>
+      </article>
+
+      <article class="card" data-animate>
+        <img src="images/hazulnut latte.webp" alt="Hazelnut">
+        <div class="card-body">
+          <h3> Natkhat Hazelnut — 50g</h3>
+          <p class="price">₹449 <span class="mrp">₹599</span></p>
+          <a class="btn small primary" href="products.html">Add</a>
+        </div>
+      </article>
+
+      <article class="card" data-animate>
+        <img src="images/icelatte.webp" alt="Iced coffee">
+        <div class="card-body">
+          <h3>Thandi Thandi Latte — 200ml</h3>
+          <p class="price">₹325 <span class="mrp">₹399</span></p>
+          <a class="btn small primary" href="products.html">Add</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials container">
+    <h2 class="section-title" data-animate>Loved by customers</h2>
+    <div class="test-grid">
+      <blockquote data-animate>
+        <p>"Rich flavour and great packaging. My go-to for quick mornings."</p>
+        <cite>- Nisha K.</cite>
+      </blockquote>
+      <blockquote data-animate>
+        <p>"Bean & Brew is not just coffee, it’s an experience. The presentation is Instagram-worthy too! 10/10."</p>
+        <cite>- Rahul P.</cite>
+      </blockquote>
+      <blockquote data-animate>
+        <p>"Great for gifting — the bundles are so cute."</p>
+        <cite>- Meera S.</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  
+
+<footer>
+    <div class="footer-container" data-animate>
+        <div class="footer-logo">
+            <img src="images/bean-brew logo.webp" alt="Bean & Brew Logo">
+        </div>
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </div>
+       
+        <p class="footer-copy">&copy; 2025 Bean & Brew. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script>
+// Scroll animation
+const elements = document.querySelectorAll('[data-animate]');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
